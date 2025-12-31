@@ -1,6 +1,6 @@
 module "vpc" {
-    # source = "../terraform-aws-vpc"
-    source = "git::https://github.com/siva2j22/terraform-aws-vpc.git?ref=main"
+     source = "../terraform-aws-vpc"
+    #source = "git::https://github.com/siva2j22/terraform-aws-vpc.git?ref=main"
        
     # vpc
     vpc_cidr = var.vpc_cidr
@@ -17,7 +17,7 @@ module "vpc" {
     # private subnets
     database_subnet_cidrs = var.database_subnet_cidrs
 
-    #peering false means no access to other vpc
+    # peering false means no access to other vpc
     is_peering_required = true
 }
 
